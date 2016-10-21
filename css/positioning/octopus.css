@@ -1,10 +1,16 @@
 .octopus {
-	margin: 30px;
-	z-index: -1;
-}
+	position: relative;
+    left: 400px;
+  z-index: -1 ;
+  }
 .hat {
-	margin-top: 10px;
+ position: relative;
+    left: 377px;
+    top:80px;
 }
+
 .glasses {
-	margin-top:20px;
+	position: relative;
+    left: 440px;
+    top:325px;
 }
