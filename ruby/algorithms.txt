@@ -1,0 +1,23 @@
+walk forward until facing the elevator door. 
+Until personal robbot reaches desired floor: 
+If the number value of the floor displayed is equal to one: 
+press the up botton
+if the number value of the floor is greater than one
+	press the up botton if the desired floor is greater than the current floor value
+	press the down botton if the desired floor is lesser than the current floor. 
+Once door is opened, enter elevator and face inside of door. 
+	to the right press the botton associated with the desired floor value
+
+
+Waking up Algorithm:
+
+Until Alarm sounds at 8:00 am 
+	Sleep
+Every time Alarm sounds before 8:15
+	open eyes and reach for phone
+	disable alarm 
+	make decision to sleep until next alarm 
+	pretend to sleep
+	browse instagram
+Once alarm 2 is sounded at 8:!5
+	get out of the bed
