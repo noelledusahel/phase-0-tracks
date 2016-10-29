@@ -46,6 +46,10 @@ puts "Would you like to enroll in our company's health insurance?"
 
 if age && garlic && insurance
 	puts "Answer: They are probably not a vampire then."
+elsif !age && (!garlic || !insurance)
+	puts "Probably a vampire"
 elsif !age && !garlic && !insurance
 	puts "Answer: They are most certainly a vampire."
+elsif name == "Drake Cula" || "Tu Fang"
+	puts "Definitely a Vampire"
 end
