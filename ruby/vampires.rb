@@ -1,3 +1,9 @@
+puts "How many employees are we processing today?"
+applicants = gets.chomp.to_i
+
+i = 0 
+until i == applicants do
+	
 puts "How Old Are You?"
 	age = gets.chomp.to_i
 
@@ -8,6 +14,8 @@ puts "Hey #{name}! Great to meet you. Oh Yea what year were you born?"
 	year = gets.chomp.to_i
 	
 	if age == 2016 - year
+		age = true
+	elsif age == 2016 - (year - 1)
 		age = true
 		#puts "cool!"
 	elsif age < 2016 - year
@@ -46,10 +54,14 @@ puts "Would you like to enroll in our company's health insurance?"
 
 if age && garlic && insurance
 	puts "Answer: They are probably not a vampire then."
-elsif !age && (!garlic || !insurance)
+elsif age && (garlic || insurance) == false
 	puts "Probably a vampire"
-elsif !age && !garlic && !insurance
+elsif age && garlic && insurance ==false
 	puts "Answer: They are most certainly a vampire."
-elsif name == "Drake Cula" || "Tu Fang"
-	puts "Definitely a Vampire"
+# elsif name == "Drake Cula" || "Tu Fang"
+# 	puts "Definitely a Vampire"
+else 
+	puts "Results Inconclusive"
+end
+i += 1;
 end
