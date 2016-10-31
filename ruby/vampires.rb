@@ -44,17 +44,20 @@ else
 	puts "Results Inconclusive"
 end
 
-puts "Please list all allergies"
+puts "Please list all allergies, hit enter after each allergy and type 'done' when finished"
 
-allergy = gets.chomp
+allergy = ' '
 allergy_list = []
-until allergy[-1] == "done"
-	allergy_list << allergy
- 
-if allergy == "sunshine"
-	puts "probably a vampire"
+
+while allergy != "done"
+	allergy = gets.chomp
+  allergy_list.push allergy
+if allergy_list[-1] == "sunshine"
+	puts "Vampire!"
+	break
 end
-end 
+end
+
 i += 1;
 end
 
