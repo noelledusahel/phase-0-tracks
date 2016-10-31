@@ -27,14 +27,10 @@ puts "What year were you born?"
 		puts "all lies"
 	end
 
-
 puts "Would you like some garlic bread? yes or no?"
 	garlic = gets.chomp
 puts "Would you like to enroll in our company's health insurance, yes or no ?"
 	insurance = gets.chomp
-
-
-
 
 if name == "Drake Cula" or name == "Tu Fang"
 	puts "Definitely a Vampire"
@@ -47,6 +43,18 @@ elsif (age == false) && (garlic == "no" || insurance == "no")
 else 
 	puts "Results Inconclusive"
 end
+
+puts "Please list all allergies"
+
+allergy = gets.chomp
+allergy_list = []
+until allergy[-1] == "done"
+	allergy_list << allergy
+ 
+if allergy == "sunshine"
+	puts "probably a vampire"
+end
+end 
 i += 1;
 end
 
