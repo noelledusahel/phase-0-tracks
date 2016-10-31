@@ -3,65 +3,50 @@ applicants = gets.chomp.to_i
 
 i = 0 
 until i == applicants do
-	
+
+puts "What is your Name?"
+	name = gets.chomp
+
 puts "How Old Are You?"
 	age = gets.chomp.to_i
 
- puts "you're #{age} years old?? Oh yeah ... What's your name?"
-	name = gets.chomp
-
-puts "Hey #{name}! Great to meet you. Oh Yea what year were you born?"
+puts "What year were you born?"
 	year = gets.chomp.to_i
-	
-	if age == 2016 - year
+	now = 2016
+	age_year = now - year
+	now.class
+
+	if age == age_year
+		 age = true
+		 puts "no lies"
+	elsif age == age_year - 1
 		age = true
-	elsif age == 2016 - (year - 1)
-		age = true
-		#puts "cool!"
-	elsif age < 2016 - year
-		age = false
-		#puts "probably a vampire"
+		puts "no lies there"
 	else 
 		age = false
-		#puts "Why lie about your age?"
+		puts "all lies"
 	end
 
-puts "Hey let me treat you to lunch! Its Italy day at the cafeteria would you like some garlic bread? yes or no?"
+
+puts "Would you like some garlic bread? yes or no?"
 	garlic = gets.chomp
-
-	if garlic == "yes"
-		garlic = true
-		#puts "right on, my treat!"
-
-	elsif garlic == "no"
-		garlic = false
-		#puts "probably a vampire"
-	end
-
-puts "Would you like to enroll in our company's health insurance?"
-
+puts "Would you like to enroll in our company's health insurance, yes or no ?"
 	insurance = gets.chomp
 
-	if insurance == "yes"
-		insurance = true
-		#puts "OK! Go see HR"
-	elsif insurance == "no"
-		insurance = false
-		#puts "probably a vampire"
-	else 
-		#puts "you need to make a decision, yes or no?"
-	end
 
-if age && garlic && insurance
+
+
+if name == "Drake Cula" or name == "Tu Fang"
+	puts "Definitely a Vampire"
+elsif (age == true) && (garlic == "yes") && (insurance == "yes")
 	puts "Answer: They are probably not a vampire then."
-elsif age && (garlic || insurance) == false
-	puts "Probably a vampire"
-elsif age && garlic && insurance ==false
-	puts "Answer: They are most certainly a vampire."
-# elsif name == "Drake Cula" || "Tu Fang"
-# 	puts "Definitely a Vampire"
+elsif (age == false) && (garlic == "no") && (insurance == "no")
+	puts "They are most certainly a vampire"
+elsif (age == false) && (garlic == "no" || insurance == "no")
+	puts "Probably a vampire" 
 else 
 	puts "Results Inconclusive"
 end
 i += 1;
 end
+
