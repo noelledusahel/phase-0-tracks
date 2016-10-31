@@ -1,40 +1,65 @@
+puts "How many employees are we processing today?"
+applicants = gets.chomp.to_i
+
+i = 0 
+until i == applicants do
+
+puts "What is your Name?"
+	name = gets.chomp
+
 puts "How Old Are You?"
 	age = gets.chomp.to_i
 
-puts "you're #{age} years old?? Oh yeah ... What's your name?"
-	name = gets.chomp
-
-puts "Hey #{name}! Great to meet you. Oh Yea what year were you born?"
+puts "What year were you born?"
 	year = gets.chomp.to_i
-	
-	if age == 2016 - year
-		puts "cool!"
-	elsif age < 2016 - year
-		puts "probably a vampire"
+	now = 2016
+	age_year = now - year
+	now.class
+
+	if age == age_year
+		 age = true
+		 puts "no lies"
+	elsif age == age_year - 1
+		age = true
+		puts "no lies there"
 	else 
-		puts "Why lie about your age?"
+		age = false
+		puts "all lies"
 	end
 
-puts "Hey let me treat you to lunch! Its Italy day at the cafeteria would you like some garlic bread? yes or no?"
+puts "Would you like some garlic bread? yes or no?"
 	garlic = gets.chomp
-
-	if garlic == "yes"
-		puts "right on, my treat!"
-
-	elsif garlic == "no"
-		puts "probably a vampire"
-	else 
-		puts "wait what did you say? yes or no?"
-	end
-
-puts "Would you like to enroll in our company's health insurance?"
-
+puts "Would you like to enroll in our company's health insurance, yes or no ?"
 	insurance = gets.chomp
 
-	if insurance == "yes"
-		puts "OK! Go see HR"
-	elsif insurance == "no"
-		puts "probably a vampire"
-	else 
-		puts "you need to make a decision, yes or no?"
-	end
+if name == "Drake Cula" or name == "Tu Fang"
+	puts "Definitely a Vampire"
+elsif (age == true) && (garlic == "yes") && (insurance == "yes")
+	puts "Answer: They are probably not a vampire then."
+elsif (age == false) && (garlic == "no") && (insurance == "no")
+	puts "They are most certainly a vampire"
+elsif (age == false) && (garlic == "no" || insurance == "no")
+	puts "Probably a vampire" 
+else 
+	puts "Results Inconclusive"
+end
+
+puts "Please list all allergies, hit enter after each allergy and type 'done' when finished"
+
+allergy = ' '
+allergy_list = []
+
+while allergy != "done"
+	allergy = gets.chomp
+  allergy_list.push allergy
+if allergy_list[-1] == "sunshine"
+	puts "Vampire!"
+	break
+end
+end
+
+i += 1;
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends!"
+end
+
