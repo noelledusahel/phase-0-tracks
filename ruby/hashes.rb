@@ -13,14 +13,28 @@
 #clients name
  
 project = {
-	:name => " "
-	# :age => " "
-	# "Number of Children" => " "
-	# "Decor Theme" => " "
+	:name => " ",
+	:age => " ",
+	"Number of Children" => " ",
+	"Decor Theme" => " "
 }
 
 puts "What is your name?"
 	name = gets.chomp
 	project[:name] = name
+
+puts "How old are you?"
+	age = gets.chomp.to_i
+	project[:age] = age
+
+puts "How many children do you have?"
+	children = gets.chomp.to_i
+	project["Number of Children"] = children
+
+puts "What is your Decor Theme?"
+	decor = gets.chomp
+	project["Decor Theme"] = decor
+
+
 
 p project
