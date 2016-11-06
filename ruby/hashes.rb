@@ -15,8 +15,8 @@
 project = {
 	:name => " ",
 	:age => " ",
-	"Number of Children" => " ",
-	"Decor Theme" => " "
+	:number_of_children => " ",
+	:decor_theme => " "
 }
 
 puts "What is your name?"
@@ -29,12 +29,38 @@ puts "How old are you?"
 
 puts "How many children do you have?"
 	children = gets.chomp.to_i
-	project["Number of Children"] = children
+	project[:number_of_children] = children
 
 puts "What is your Decor Theme?"
 	decor = gets.chomp
-	project["Decor Theme"] = decor
-
-
+	project[:decor_theme] = decor
 
 p project
+
+puts "Would You like to change any of your answers?"
+replace_value = gets.chomp
+
+if replace_value == "none"
+	puts "thank you!"
+
+elsif replace_value == "name"
+	puts "What is your name?"
+	replace_name= gets.chomp
+	project[:name] = replace_name
+
+elsif replace_value == "age"
+	puts "How old are you?"
+	replace_age = gets.chomp.to_i
+	project[:age] = replace_age
+
+elsif replace_value == "number of children"
+	puts "How many children do you have?"
+	replace_children = gets.chomp.to_i
+	project[:number_of_children] = replace_children
+
+elsif replace_value == "decor theme"
+	puts "What is your Decor Theme?"
+	replace_decor = gets.chomp
+	project[:decor_theme] = replace_decor
+end
+puts project
