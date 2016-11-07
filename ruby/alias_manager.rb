@@ -1,5 +1,8 @@
 
-name = "Felicia Torres"
+puts "Enter a First and Last Name"
+name = gets.chomp
+
+# name = "Felicia Torres"
 #create an array
 name = name.split(' ')
 
@@ -13,16 +16,17 @@ p $name_arr
 # create a new array 
 coded_arr = []
 vowels = ["a","e","i", "o", "u"]
-# .next applied to each item in the array 
 
-$name_arr.select {|letter| letter =~ /[aeiou]/}
-$name_arr.map! {|letter| letter.next}
+#select vowels
+p $name_arr.select! {|letter| letter =~ /[aeiou]/}
+# .next applied to each item in the array 
+# $name_arr.map! {|letter| letter.next}
 
 i = 0 
 p "Original", $name_arr 
 def next_vowel(letter)
 	while i < name_arr.length
-	if letter =~ /[aeiou]/
+	if letter =~ [aeiou]
 		$name_arr.drop(letter)
 	i += 1
 end 
@@ -31,7 +35,5 @@ end
 
 
 p $name_arr
-
-
 
 
