@@ -4,66 +4,67 @@
 
 #Release 0
 
-# $arr = [42, 89, 23, 1]
-# $index_value = ""
+$arr = [42, 89, 23, 1]
+$index_value = ""
 
 
-# def search_array(number)
-# 	i = 0
-#  	until i == $arr.length do 
-#  		if $arr[i] == number
-#  		$index_value = i
-#  		elsif
-#  			$arr.include?(number) == false
-#  			$index_value = nil
-#  		end
-#  		i += 1
-#  	end
-# end
+def search_array(number)
+	i = 0
+ 	until i == $arr.length do 
+ 		if $arr[i] == number
+ 		$index_value = i
+ 		elsif
+ 			$arr.include?(number) == false
+ 			$index_value = nil
+ 		end
+ 		i += 1
+ 	end
+end
 
 
-# search_array(1)
-# puts "First Value"
-# p $index_value
+search_array(1)
+puts "First Value"
+p $index_value
 
-# search_array(23)
-# puts "Second Value"
-# p $index_value
+search_array(23)
+puts "Second Value"
+p $index_value
 
-# search_array(500)
-# puts "Third Value"
-# p $index_value
+search_array(500)
+puts "Third Value"
+p $index_value
 
-# search_array(9000)
-# puts "Fourth Value"
-# p $index_value
+search_array(9000)
+puts "Fourth Value"
+p $index_value
 
-# puts "Array Length"
-# p $arr.length
+puts "Array Length"
+p $arr.length
 
-#Release 1
-# def fibSeq(number)
-#  sequence = [0]
+# Release 1
 
-#   (number).times do |i|
-#     if i==0
-#       sequence[i] = 0
-#     elsif i==1
-#       sequence[i] = 1
-#     else
-#       sequence[i] = sequence[i-1] + sequence[i-2]
-#     end  
-#   end
-#   	return sequence[0..number]
-# end
+def fibSeq(number)
+ sequence = [0]
+
+  (number).times do |i|
+    if i==0
+      sequence[i] = 0
+    elsif i==1
+      sequence[i] = 1
+    else
+      sequence[i] = sequence[i-1] + sequence[i-2]
+    end  
+  end
+  	return sequence[0..number]
+end
 
 
-#puts "Fib"
-#p fibSeq(6)
-#p fibSeq(100)
+puts "Fib"
+p fibSeq(6)
+p fibSeq(100)
 
-#Release 2
-#Bubble Sort
+# Release 2
+# Bubble Sort
 
 array = [2,31,4,5,64,7,12,3,45]
 array = [ "A", "f", "t", "b", "d", "a"]
