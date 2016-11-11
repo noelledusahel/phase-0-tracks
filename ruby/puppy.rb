@@ -59,11 +59,8 @@ class Birds
   end
 
 end
-
+###########
 bird_count = 0
-
-# fit_bit = {}
-
  fit_bit = []
 while bird_count < 50
     birddie = Birds.new
@@ -77,6 +74,21 @@ while bird_count < 50
    
 end
  p fit_bit
+ ################
+ birddie_arr = []
+num = 0
+    
+    while num < 50
+    birddie_arr << Birds.new
+    num += 1
+    end
+
+birddie_arr.each do |bird_count|
+    bird_count.food("worm")
+    bird_count.miles_flown("100")
+end
+
+p birddie_arr
 # birddie_arr = []
 # num = 0
     
