@@ -25,8 +25,24 @@ def remove_item(grocery_list, name)
 end 
 
 remove_item(grocery_list, "pizza")
-
 p grocery_list
+
+def update_value(grocery_list, name, value)
+	grocery_list[name] = value
+end 
+
+update_value(grocery_list, "apples", 17)
+puts grocery_list
+
+def makeit_pretty(list)
+list_array = list.flatten
+list_array.each do |list|
+	list_array.join(" ")
+end 
+end
+
+puts makeit_pretty(grocery_list)
+
 
 
 # p grocery_array
@@ -50,8 +66,8 @@ p grocery_list
 # output:
 
 # Method to update the quantity of an item
-# input:
-# steps:
+# input: the list name, the name of the item, and the new quatity
+# steps: same code as add item, this time you will use an existing key, and enter a new number for 
 # output:
 
 # Method to print a list and make it look pretty
