@@ -1,4 +1,6 @@
 class Santa
+
+	attr_accessor :gender, :ethnicity, :age 
 #Here the Santa Class has been initialized, and the variables gender and ethnicity are passed in...
 	def initialize(gender, ethnicity)
 	# 	puts "Initializing Santa instance..."
@@ -17,10 +19,10 @@ class Santa
 		puts "What a good #{cookie_type} cookie!"
 	end
 
-	# def celebrate_birthday
-	# 	new_age = @age + 1
-	# 	puts "Santa is #{new_age} years old" 
-	# end
+	def celebrate_birthday
+		new_age = @age + 1
+		puts "Santa is #{new_age} years old" 
+	end
 
 	def get_mad_at(reindeer_name)
 		puts "Bad #{reindeer_name}!!"
@@ -30,34 +32,42 @@ class Santa
 		
 	end
 	#First the getter code
-	def gender
-		@gender
-	end
+	# def age
+	# 	@age
+	# end 
 
-	def ethnicity
-		@ethnicity
-	end
+	# def gender
+	# 	@gender
+	# end
+
+	# def ethnicity
+	# 	@ethnicity
+	# end
 	# then the setter code!
-	def gender= (new_gender)
-		@gender = new_gender
-	end 
+	# def gender= (new_gender)
+	# 	@gender = new_gender
+	# end 
 
-	def ethnicity= (new_ethnicity)
-		@ethnicity = new_ethnicity
-	end	
+	# def ethnicity= (new_ethnicity)
+	# 	@ethnicity = new_ethnicity
+	# end	
 end
 
 santa = Santa.new("agender","Ethiopian")
 
 puts "Santa is a #{santa.ethnicity} #{santa.gender} person"
-puts "Santa is a #{santa.ethnicity} #{santa.gender} person"
+
 
 santa.gender = "lesbian"
 santa.ethnicity = "white"
+
+puts "Santa is a #{santa.ethnicity} #{santa.gender} person"
+
 santa.get_mad_at("Dancer")
+santa.celebrate_birthday
 
 
-#Just created a list of names to assign gender and ethnicity attributes
+# Just created a list of names to assign gender and ethnicity attributes
 # names = ["Sammie Claus", "Tomas Claus", "Seva Claus", "Jamal Claus"]
 # genders = ["agender", "female", "bigender", "male"]
 # ethnicities = ["black", "Latino", "Indian", "Japanese-African"]
