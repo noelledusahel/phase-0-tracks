@@ -76,8 +76,8 @@ santa.get_mad_at("Dancer")
 # Just created a list of names to assign gender and ethnicity attributes
 names = ["Sammie Claus", "Tomas Claus", "Seva Claus", "Jamal Claus"]
 
-genders = ["agender", "female", "bigender", "male"]
-ethnicities = ["black", "Latino", "Indian", "Japanese-African"]
+genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
 santa.age = (1..140).to_a
 # #This is a list that will store the names and attributes of applicants to Regency Mall Santa Land 
