@@ -9,7 +9,7 @@ class Santa
 		#these could be used, but i chose not to use these santa defaults
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0 
-		@santa_profile = []
+		# @santa_profile = []
 	end
 
 	def speak
@@ -20,10 +20,10 @@ class Santa
 		puts "What a good #{cookie_type} cookie!"
 	end
 
-	def celebrate_birthday
-		new_age = @age + 1
-		puts "Santa is #{new_age} years old" 
-	end
+	# def celebrate_birthday
+	# 	new_age = @age + 1
+	# 	puts "Santa is #{new_age} years old" 
+	# end
 
 	def get_mad_at(reindeer_name)
 		puts "Bad #{reindeer_name}!!"
@@ -32,13 +32,12 @@ class Santa
 		p @reindeer_ranking
 	end
 
-	def santa_generator(names, genders, ethnicities)
-		@santa_profile << names.sample 
-		@santa_profile << genders.sample 
-		@santa_profile << ethnicities.sample
-
+	def santa_generator(age, genders, ethnicities)
+		@santa_profile = []
+		@santa_profile << age  << genders << ethnicities
+		p @santa_profile
 	end 
-	#First the getter code
+	# #First the getter code
 	# def age
 	# 	@age
 	# end 
@@ -50,7 +49,7 @@ class Santa
 	# def ethnicity
 	# 	@ethnicity
 	# end
-	# then the setter code!
+	# # then the setter code!
 	# def gender= (new_gender)
 	# 	@gender = new_gender
 	# end 
@@ -71,16 +70,24 @@ santa.ethnicity = "white"
 puts "Santa is a #{santa.ethnicity} #{santa.gender} person"
 
 santa.get_mad_at("Dancer")
-santa.celebrate_birthday
+# santa.celebrate_birthday
 
 
 # Just created a list of names to assign gender and ethnicity attributes
 names = ["Sammie Claus", "Tomas Claus", "Seva Claus", "Jamal Claus"]
+
 genders = ["agender", "female", "bigender", "male"]
 ethnicities = ["black", "Latino", "Indian", "Japanese-African"]
+
+santa.age = (1..140).to_a
 # #This is a list that will store the names and attributes of applicants to Regency Mall Santa Land 
-santa.santa_generator(names, genders, ethnicities)
-p @santa_profile
+
+
+i = 100
+i.times do |x|
+	x = santa.santa_generator(santa.age.sample, genders.sample, ethnicities.sample)
+end 
+
 
 # diversity_file = []
 # names.length.times do |i|
