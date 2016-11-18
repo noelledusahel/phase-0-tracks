@@ -13,7 +13,7 @@ console.log(name_array);
 var horse = {color: blue_array, name: name_array};
 
 for (var i = 0; i < name_array.length; i++){
-	console.log(name_array[i], blue_array[i]);
+	console.log("name and color: " + name_array[i], blue_array[i]);
 };
 // horse.push(blue_array[1],name_array[1]);
 // console.log(horse);
