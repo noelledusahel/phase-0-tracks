@@ -8,7 +8,7 @@ var stringArray = string.split("");
 // };
 var newArray = stringArray.reverse();
 var newWord = newArray.join('');
-console.log(newWord);
+console.log(" " + newWord);
 }
 
 
