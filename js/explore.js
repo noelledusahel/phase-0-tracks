@@ -8,8 +8,10 @@ var stringArray = string.split("");
 // };
 var newArray = stringArray.reverse();
 var newWord = newArray.join('');
-console.log(" " + newWord);
-}
+var finalWord = newWord.toString();
+console.log(finalWord);
+};
 
 
 console.log(reverse("hello"))
+console.log(reverse("bologna"))
