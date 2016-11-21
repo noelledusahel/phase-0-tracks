@@ -17,4 +17,5 @@ console.log(array[0]);
 //use sort Array
 //finally then function longest would return the item in the 0 index position
 }
+console.log(longest(["long phrase","longest phrase","longer phrase"]))
 console.log(longest(["greens","beans","chicken", "tomatoes"]))
