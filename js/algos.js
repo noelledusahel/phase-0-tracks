@@ -6,6 +6,7 @@ for (var i = 0; i < array.length; i++){
 	array.sort(array[i].length);
 	array.reverse();
 	// lengthArray.sort();
+	return array[0];
 	}
 
 //look up how to retreive last item in array
