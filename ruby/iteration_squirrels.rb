@@ -57,3 +57,27 @@ foods = {
 foods.each do |eng, port|
 		puts "The word #{eng.upcase} in Portuguese is #{port}"
 end	
+
+p foods
+
+pet_arr = ["dogs", "cats", "parrots"]
+p pet_arr
+
+pet_arr.delete_if {|pet| pet.start_with?("d")}
+pet_arr.keep_if {|pet| pet.start_with?("d")}
+pet_arr.select! {|pet| pet.start_with?("d")}
+ 
+p pet_arr
+
+hash = {
+	:pet1 => "dogs",
+	:pet2 => "cats",
+	:pet3 => "parrots"
+}
+
+p hash
+
+hash.delete_if {|pet, species| species.length > 5 }
+hash.keep_if {|pet, species| species.length > 5 }
+
+p hash
