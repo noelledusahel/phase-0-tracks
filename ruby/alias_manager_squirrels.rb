@@ -17,7 +17,7 @@ def name_encoder(original_name) # the method takes a string as a parameter
 			new_name_array << i.next #otherwise run .next on the item
 		end 	
 	end 
-	new_name_array # return new array 
+	new_name_array.join('') # return new array 
 
 end
 
