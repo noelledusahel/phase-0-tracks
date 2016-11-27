@@ -1,8 +1,8 @@
+$alias_storage = []
 
 def name_encoder # the method takes a string as a parameter
 puts "Enter a name you would like to encrypt"
 	original_name = gets.chomp
-
 	two_part_name = original_name.split(' ') # splits the name in to two items in an array called two_part_name
 	two_part_name = two_part_name.reverse    # reverse item order in two part name array
 	name_array = two_part_name.join(' ').chars
@@ -20,12 +20,12 @@ puts "Enter a name you would like to encrypt"
 			new_name_array << i.next #otherwise run .next on the item
 		end 	
 	end 
-	new_name_array.join('') # return new array 
 
+	$alias_storage << new_name_array.join('') # return new array 
+	
 end
 
 p name_encoder
-
 
 # p name_encoder("Noelle Barber")
 
