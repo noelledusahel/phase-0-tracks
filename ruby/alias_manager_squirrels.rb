@@ -9,15 +9,15 @@ def name_encoder(original_name) # the method takes a string as a parameter
 	name_array.each do |i|
 	# num = 0 
 	# while num < name_array.length
-		if i == " "
-			new_name_array << " "
-		elsif i =~ /[aeiou]/
-			new_name_array << i
+		if i == " " # if the array item is empty
+			new_name_array << " " # add an empty space to the new array
+		elsif i =~ /[aeiou]/ # if the array item matches either of these
+			new_name_array << i # add the original item to the array
 		else
-			new_name_array << i.next
+			new_name_array << i.next #otherwise run .next on the item
 		end 	
 	end 
-	new_name_array
+	new_name_array # return new array 
 
 end
 
