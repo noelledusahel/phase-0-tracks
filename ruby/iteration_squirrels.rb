@@ -25,5 +25,23 @@ end
 
 travel_agent{|origin, destination, oneway, roundtrip| puts "--------\n Your Trip Itinerary: \n From #{origin} to #{destination} \n One Way: #{oneway} \n Round Trip: #{roundtrip}"}
 
-
 #Release 1 
+colors = ["roxa" , "vermelho", "amarelo", "marrom", "azul"]
+cores = []
+
+colors.each do |cor|
+	p cor.chars
+end 
+
+colors.each do |cor|
+	cores << cor .reverse
+end 
+
+p cores
+
+foods = { 
+	cheese: "queijo",
+	bread: "pao",
+	juice: "suco",
+	orange:  "laranja"
+}
