@@ -29,15 +29,23 @@ travel_agent{|origin, destination, oneway, roundtrip| puts "--------\n Your Trip
 colors = ["roxa" , "vermelho", "amarelo", "marrom", "azul"]
 cores = []
 
-colors.each do |cor|
+p cores
+
+colors.each do |cor| # .each command to print colors as character array
 	p cor.chars
 end 
+p colors
 
-colors.each do |cor|
+colors.each do |cor| # .each command to reverse items colors array and feed them in to a new array
 	cores << cor .reverse
 end 
+p colors	#expectation is that colors array itself wont change...
+p cores		#but the new array cores is what does store the changes
 
-p cores
+colors.map! do |cor| # map! command changes the colors array
+	cor.chars
+end 
+p colors
 
 foods = { 
 	cheese: "queijo",
@@ -45,3 +53,7 @@ foods = {
 	juice: "suco",
 	orange:  "laranja"
 }
+
+foods.each do |eng, port|
+		puts "The word #{eng.upcase} in Portuguese is #{port}"
+end	
