@@ -27,6 +27,19 @@ class Santa
 		@reindeer_ranking.push(reindeer_name)
 		@reindeer_ranking
 	end 
+
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
+	
 end
 
 jimbo = Santa.new("agender", "white")
