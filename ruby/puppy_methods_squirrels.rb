@@ -6,3 +6,6 @@ class Puppy
 	end
 end 
 
+
+jack = Puppy.new
+jack.fetch("ball")	
