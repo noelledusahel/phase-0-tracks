@@ -1,4 +1,6 @@
 class Santa
+	attr_reader :age , :ethnicity
+	attr_accessor  :gender
 
 	def initialize(gender, ethnicity) # Santa class is passed 2 parameters on initialization, gender and ethnicity
 		puts "initializing Santa instance"
@@ -28,25 +30,29 @@ class Santa
 		@reindeer_ranking
 	end 
 
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+	# def gender=(new_gender)
+	# 	@gender = new_gender
+	# end
 
-	def age
-		@age
-	end
+	# def age
+	# 	@age
+	# end
 
-	def ethnicity
-		@ethnicity
-	end
-	
+	# def ethnicity
+	# 	@ethnicity
+	# end
+
 end
 
 jimbo = Santa.new("agender", "white")
 p jimbo.celebrate_birthday
 p jimbo.celebrate_birthday
 p jimbo.get_mad_at("Dancer")
-
+p jimbo.get_mad_at("Rudolph")
+p jimbo.age
+p jimbo.gender 
+jimbo.gender = "gay"
+p jimbo.gender
 # jimbo.speak
 # jimbo.eat_milk_and_cookies("choco chip")
 
