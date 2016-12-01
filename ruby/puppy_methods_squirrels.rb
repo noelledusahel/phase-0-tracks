@@ -1,9 +1,6 @@
 class Puppy
 
-	def initialize
-		puts "initializing puppy instance"
-	end 
-
+	
 	def fetch(toy)
 		puts "I brought back the #{toy}!"
 		toy 
@@ -18,6 +15,10 @@ class Puppy
 	def roll_over
 		puts "*rolls over*"
 	end
+	
+	def initialize
+		puts "initializing puppy instance"
+	end 
 
 	def dog_years(human_years)
 		dog_years = human_years * 7
@@ -34,10 +35,39 @@ class Puppy
 	end 
 end 
 
+# jack = Puppy.new
+# jack.fetch("ball")
+# jack.roll_over	
+# jack.speak(5)
+# p jack.dog_years(3)
+# p jack.detect_cancer(4)
 
-jack = Puppy.new
-jack.fetch("ball")
-jack.roll_over	
-jack.speak(5)
-p jack.dog_years(3)
-p jack.detect_cancer(4)
+class Horse
+
+	def initialize
+		puts "initializing horse instance"
+		@name = "Charlie"
+	end 
+
+	def eat(food)
+		puts "#{@name} eats #{food}"
+	end
+
+	def gallop(steps)
+		steps.times do |x|
+			p "Clippity Clop"
+		end 
+	end
+end 
+
+stables = []
+
+10.times do |horse|
+	stables << Horse.new
+	stables
+end
+
+# p stables
+
+
+
