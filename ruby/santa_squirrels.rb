@@ -42,6 +42,8 @@ class Santa
 	# 	@ethnicity
 	# end
 
+
+
 end
 
 jimbo = Santa.new("agender", "white")
@@ -73,6 +75,27 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 # @reindeer_ranking.each do |i|
 # 	puts "#{i} has a santa"
 # end 
+
+# Release 4 
+#Create a Santa Generator
+#input: our arrays for genders and ethnicities. Also age will be a random number between 1-140
+#result: a hash or severla arrays
+
+# santa = Santa.new 
+age = (1..140).to_a
+
+def santa_generator(age, genders, ethnicities)
+	santas_profile = []
+	santas_profile << age << genders << ethnicities
+	p santas_profile
+end 
+
+i = 100
+i.times do |x|
+	x = santa_generator(age.sample, example_genders.sample, example_ethnicities.sample )
+end 
+
+
 
 
 
