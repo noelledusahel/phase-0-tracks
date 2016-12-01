@@ -62,12 +62,21 @@ end
 
 stables = []
 
-10.times do |horse|
+50.times do |horse|
 	stables << Horse.new
 	stables
 end
 
 # p stables
 
+food = ["apples", "grain", "grass", "carrots"]
+
+stables.each do |horse|
+	puts horse
+	horse.eat(food.sample)
+	horse.gallop(2)
+end
+
+# p stables
 
 
