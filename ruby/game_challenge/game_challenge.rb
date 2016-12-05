@@ -44,20 +44,20 @@ end
 end 
 
 
-puts "Place your bet Player 1, enter a word"
-	answer = gets.chomp
-	game1 = Game.new(answer)
+# puts "Place your bet Player 1, enter a word"
+# 	answer = gets.chomp
+# 	game1 = Game.new(answer)
 
-	i = 0 
-until i == answer.length do
-puts "Player 2, Guess a Letter"
-	guess = gets.chomp
-	p game1.match(game1.store_answer, guess)
-	if i >= answer.length then
-		 break
-	end
-
-end 
+# 	i = 0 
+# until i == answer.length do
+# puts "Player 2, Guess a Letter"
+# 	guess = gets.chomp
+# 	p game1.match(game1.store_answer, guess)
+# 	if i >= answer.length then
+# 		 break
+# 	end
+	# make this loop work!!!! use game_over
+ 
 
 	
 
