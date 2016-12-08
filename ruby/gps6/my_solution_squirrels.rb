@@ -40,7 +40,7 @@ class VirusPredictor
 #the number of predicted deaths. .floor rounds the number down. the return value is number_of_deaths
    def death_percentage(num)
     (@population * num).floor
-  end #see if you can refactor this more
+  end #created a method that would calculate number of deaths and take percentage as an argument. 
 
   def predicted_deaths#(population_density, population, state)
     # predicted deaths is solely based on population density
@@ -65,25 +65,21 @@ class VirusPredictor
   def speed_of_spread#(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-  
-    speed = 0.0
+  # refactoring of speed_of_spread took # speed out of the if confiditional statement and set the return value for each statement to speed just once 
 
-    if @population_density >= 200
-      speed += 0.5
-    elsif @population_density >= 150
-      speed += 1
-    elsif @population_density >= 100
-      speed += 1.5
-    elsif @population_density >= 50
-      speed += 2
-    else
-      speed += 2.5
-    end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
-  end
-
-  
+   speed = if @population_density >= 200
+    			0.5
+    		elsif @population_density >= 150
+    			1
+    		elsif @population_density >= 100
+       			1.5
+    		elsif @population_density >= 50
+      			 2
+    		else
+      			2.5
+    		end
+	puts " and will spread across the state in #{speed} months.\n\n"
+  end 
 end
 
 #=======================================================================
