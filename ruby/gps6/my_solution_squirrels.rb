@@ -34,7 +34,7 @@ class VirusPredictor
         state.virus_effects
       end 
   end 
-
+#private methods can only be accessed by within the class object
   private
 #input is elements of STATE_DATA hash, output is a integer representing
 #the number of predicted deaths. .floor rounds the number down. the return value is number_of_deaths
