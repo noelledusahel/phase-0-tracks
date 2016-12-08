@@ -17,12 +17,14 @@ class VirusPredictor
     @population = population
     @population_density = population_density
   end
-# this method triggets both predicted deaths and speed of spread to run. 
+# this method triggers both predicted deaths and speed of spread to run. 
+# I removed the arguments, because both of these methods just use instance variables,  data that is already available to the class
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths #(@population_density, @population, @state)
+    speed_of_spread#(@population_density, @state)
   end
 
+ 
   def state_report(state_data)
       state.data.each do |state_name, state_info|
         # number = predicted_deaths(state_info[0], state_info[1], state_name)
@@ -36,7 +38,7 @@ class VirusPredictor
   private
 #input is elements of STATE_DATA hash, output is a integer representing
 #the number of predicted deaths. .floor rounds the number down. the return value is number_of_deaths
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths#(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -56,7 +58,7 @@ class VirusPredictor
 
 #passes in the population desity to return a float called speed. speed starts at 0 and
 #is increased by a set value depending on where the states population density falls
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread#(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
   
