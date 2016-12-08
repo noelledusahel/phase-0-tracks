@@ -4,8 +4,7 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-# require relative finds a file in the same root directory and imports it's data
-# require is used for importing libraries 
+
 require_relative 'state_data'
 
 class VirusPredictor
@@ -112,3 +111,15 @@ alaska.virus_effects
 
 #=======================================================================
 # Reflection Section
+# STATE_DATA is a hash constant. It's defined in capital letters and is meant to be unchanged
+# it also is a parent hash for a number of smaller hashes.
+# require relative finds a file in the same root directory and imports it's data
+# require is used for importing libraries 
+# One way to iterate through a hash is to use a .each statement, and pass the key and value in as parameters
+# Another way to iterate through a hash is to use .each_key, .each_value .each_pair 
+# When refactoring virus effects, I saw that the variables had already been passed in to the class and were 
+# already available to all methods in the class on initialization. I saw that there was no need to pass those same variables again through the method. 
+# concepts that I solidified in this challenge include: refactoring a method to make it more dry, recognizing which variables are available and where they are available
+# I also solidified my understanding of how to iterate through a hash 
+
+
