@@ -8,11 +8,15 @@
 
 function reverse(string){
 	var letter_array = string.split('')
-	console.log(letter_array)
 	var new_letter_array = []
 		for (var i = (letter_array.length - 1); i >= 0; i -= 1)
 		new_letter_array.push(letter_array[i]);
 		console.log(new_letter_array.join(''))
 }
 
-reverse("dog")
+var reversal = reverse("hyenna")
+
+if (reversal == "anneyh") {
+	console.log("You got this!");
+}
+
