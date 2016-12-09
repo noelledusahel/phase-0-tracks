@@ -24,15 +24,15 @@ class VirusPredictor
   end
 
  
-  def state_report(state_data)
-      state.data.each do |state_name, state_info|
-        # number = predicted_deaths(state_info[0], state_info[1], state_name)
-        # speed = speed_of_spread(state_info[0], state_name)
-        state = VirusPredictor.new(state_name, state_info[:population_density],state_info[:population] )
-        #puts "#{state_name} will loose #{number} people in this outbreak and will spread across the state in #{speed}. "
-        state.virus_effects
-      end 
-  end 
+  # def state_report(state_data) ### This Should Not Be In the Method
+  #     state.data.each do |state_name, state_info|
+  #       # number = predicted_deaths(state_info[0], state_info[1], state_name)
+  #       # speed = speed_of_spread(state_info[0], state_name)
+  #       state = VirusPredictor.new(state_name, state_info[:population_density],state_info[:population] )
+  #       #puts "#{state_name} will loose #{number} people in this outbreak and will spread across the state in #{speed}. "
+  #       state.virus_effects
+  #     end 
+  # end 
 #private methods can only be accessed by within the class object
   private
 #input is elements of STATE_DATA hash, output is a integer representing
@@ -71,30 +71,34 @@ class VirusPredictor
     		elsif @population_density >= 150
     			1
     		elsif @population_density >= 100
-       			1.5
+       		1.5
     		elsif @population_density >= 50
-      			 2
+      		2
     		else
-      			2.5
+      		2.5
     		end
 	puts " and will spread across the state in #{speed} months.\n\n"
   end 
 end
 
 #=======================================================================
-def state_report(state_data)
-      state_data.each do |state_name, state_info|
-        # number = predicted_deaths(state_info[0], state_info[1], state_name)
-        # speed = speed_of_spread(state_info[0], state_name)
-        state = VirusPredictor.new(state_name, state_info[:population_density],state_info[:population] )
-        #puts "#{state_name} will loose #{number} people in this outbreak and will spread across the state in #{speed}. "
-        state.virus_effects
-      end 
-  end 
+# def state_report(state_data)
+#       state_data.each do |state_name, state_info|
+#         # number = predicted_deaths(state_info[0], state_info[1], state_name)
+#         # speed = speed_of_spread(state_info[0], state_name)
+#         state = VirusPredictor.new(state_name, state_info[:population_density],state_info[:population] )
+#         #puts "#{state_name} will loose #{number} people in this outbreak and will spread across the state in #{speed}. "
+#         state.virus_effects
+#       end 
+#   end 
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
-state_report(STATE_DATA)
+ STATE_DATA.each do |state_name, state_info|
+    state = VirusPredictor.new(state_name, state_info[:population_density],state_info[:population] )
+    state.virus_effects
+end 
+
 
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 alabama.virus_effects
