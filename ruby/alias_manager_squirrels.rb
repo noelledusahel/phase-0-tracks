@@ -2,7 +2,7 @@ $alias_storage = []
 
 def name_encoder # the method takes a string as a parameter
 original_name = " "
-until original_name == "done" do 
+# until original_name == "done" do 
 
 	puts "Enter a name you would like to encrypt"
 		original_name = gets.chomp
@@ -11,6 +11,7 @@ until original_name == "done" do
 		name_array = two_part_name.join(' ').chars
 		new_name_array = []
 		
+		vowel_hash ={"a"=>"e", "e" => "i", "i" => "o", "o"=>"u"}
 
 		name_array.each do |i|
 		# num = 0 
@@ -18,15 +19,15 @@ until original_name == "done" do
 			if i == " " # if the array item is empty
 				new_name_array << " " # add an empty space to the new array
 			elsif i =~ /[aeiou]/ # if the array item matches either of these
-				new_name_array << i # add the original item to the array
+				new_name_array << vowel_hash[i] # add the original item to the array
 			else
 				new_name_array << i.next #otherwise run .next on the item
 			end 	
 		end 
 		$alias_storage << new_name_array.join('') # return new array 
 		
-	break if original_name == "done"
-	end	
+	# break if original_name == "done"
+	# end	
 	$alias_storage
 end 
 p name_encoder
