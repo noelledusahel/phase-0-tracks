@@ -11,12 +11,15 @@ function reverse(string){
 	var new_letter_array = []
 		for (var i = (letter_array.length - 1); i >= 0; i -= 1)
 		new_letter_array.push(letter_array[i]);
-		console.log(new_letter_array.join(''))
+		answer = new_letter_array.join('')
+		console.log(answer)
 }
 
-var reversal = reverse("hyenna")
-
-if (reversal == "anneyh") {
-	console.log("You got this!");
+if (1 == 1){
+	reverse("hyenna");
 }
+
+// if (reversal == "anneyh") {
+// 	console.log("You got this!");
+// }
 
