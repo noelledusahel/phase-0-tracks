@@ -1,0 +1,44 @@
+1. Display the information in one table (either table is fine).
+Input: SELECT * FROM banks;
+Output:
+1|Exellent Bank
+2|CENTRAL CREDIT UNION
+3|CALIFORNIA COLLECTIVE BANK
+
+
+Input: 
+SELECT * FROM clients JOIN banks ON clients.bank_id = banks.id;
+Output: 
+1|Yiannis|3000|true|1|1|Exellent Bank
+2|Meklit|25000|true|3|3|CALIFORNIA COLLECTIVE BANK
+3|Kidest|10|false|2|2|CENTRAL CREDIT UNION
+
+2. 
+Input: Update an item that meets some condition (you can choose a condition that makes sense)
+UPDATE clients SET balance = 5000 where name = "Yiannis";
+Output:
+1|Yiannis|5000|true|1|1|Exellent Bank
+2|Meklit|25000|true|3|3|CALIFORNIA COLLECTIVE BANK
+3|Kidest|10|false|2|2|CENTRAL CREDIT UNION
+
+3. Display the information in both tables using one query.
+Input: 
+SELECT * FROM clients JOIN banks ON clients.bank_id = banks.id;
+Output: 
+1|Yiannis|5000|true|1|1|Exellent Bank
+2|Meklit|25000|true|3|3|CALIFORNIA COLLECTIVE BANK
+3|Kidest|10|false|2|2|CENTRAL CREDIT UNION
+
+4.Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+Input: SELECT clients.name, clients.balance, banks.name FROM clients JOIN banks ON clients.bank_id =  banks.id;
+Output: 
+Yiannis|5000|Exellent Bank
+Meklit|25000|CALIFORNIA COLLECTIVE BANK
+Kidest|10|CENTRAL CREDIT UNION
+
+5. Delete an item that meets some condition
+Input: DELETE FROM clients WHERE active_acct = "false";
+Output:
+1|Yiannis|5000|true|1
+2|Meklit|25000|true|3
