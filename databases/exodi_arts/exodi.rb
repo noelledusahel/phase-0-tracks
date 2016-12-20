@@ -16,18 +16,27 @@ create_table_cmd =
 
 db.execute(create_table_cmd)
 
-def enter_item (db, name, price, color)
-	db.execute('INSERT INTO price_list (name, unit_price, color) VALUES (?, ?, ?)', [name, price, color])
-end 
-1.times do
-  enter_item(db, "canvas", 25, "#e5eefc")
-end
+# def enter_item (db, name, price, color)
+# 	db.execute('INSERT OR IGNORE INTO price_list (name, unit_price, color) VALUES (?, ?, ?)', [name, price, color])
+# end 
+
+
+# enter_item(db, "canvas", 25, "#e5eefc")
+# enter_item(db, "Triline tape", 37, "#24984e")
+# enter_item(db, "Heavy Paper SCPS-2", 5.5, "#FFFDE9")
 
 
 price_list = db.execute("SELECT * FROM price_list")
-
-
 p price_list
+
+
+puts "Make a selection"
+selection = gets.chomp.to_i
+
+retrieve_item = db.execute("SELECT * FROM price_list WHERE id = #{selection}" )
+puts "----------Your Order----------"
+p retrieve_item
+
 
 
 

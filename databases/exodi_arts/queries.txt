@@ -1,0 +1,18 @@
+
+
+require sqlite3
+require faker 
+
+CREATE TABLE price_list (
+id INTEGER PRIMARY KEY,
+name VARCHARS(255),
+unit_price INT,
+color VARCHARS(255)
+);
+
+####example####
+INPUT:
+INSERT INTO price_list (name, unit_price, color) VALUES ("canvas", .25, "#e5eefc");
+OUTPUT 
+{1, canvass, .25, e5eefc}
+
