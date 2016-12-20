@@ -3,7 +3,7 @@ require 'sqlite3'
 
 #create database
 db = SQLite3::Database.new("exodi_arts.db")
-
+db.results_as_hash = true
 #create table
 create_table_cmd = 
 	"CREATE TABLE IF NOT EXISTS price_list(
@@ -27,7 +27,10 @@ db.execute(create_table_cmd)
 
 
 price_list = db.execute("SELECT * FROM price_list")
-p price_list
+
+price_list.each do |entry|
+	puts "Item #{entry['id']}: #{entry['name']}, Price:#{entry['unit_price']}, Color:#{entry['color']}"
+end 
 
 
 puts "Make a selection"
@@ -35,7 +38,11 @@ selection = gets.chomp.to_i
 
 retrieve_item = db.execute("SELECT * FROM price_list WHERE id = #{selection}" )
 puts "----------Your Order----------"
-p retrieve_item
+
+retrieve_item.each do  |item|
+	puts " You chose #{item['name']} at a price of $#{item['unit_price']} per yard"
+end 
+
 
 
 
