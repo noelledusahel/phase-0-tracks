@@ -17,8 +17,8 @@ create_pricelist_cmd =
 create_cart_cmd = 
 	"CREATE TABLE IF NOT EXISTS shopping_cart(
 		id INTEGER PRIMARY KEY,
-		pricelist_id INT,
-		FOREIGN KEY(pricelist_id) REFERENCES price_list(id)
+		item_id INT,
+		FOREIGN KEY(item_id) REFERENCES price_list(id)
 	);"
 
 db.execute(create_pricelist_cmd)
@@ -41,7 +41,7 @@ end
 
 
 puts "Make a selection"
-selection = gets.chomp.to_i 
+selection = gets.chomp
 # this item can populate a second database that keeps track of the price of items and a grand total. 
 # create a question that asks users to enter how many units"
 # multiply this by price per unit
@@ -56,8 +56,8 @@ retrieve_item.each do  |item|
 	puts " You chose #{item['name']} at a price of $#{item['unit_price']} per yard"
 end 
 
-db.execute("INSERT INTO shopping_cart (pricelist_id) VALUES ('#{selection}') ")
-db.execute("SELECT * FROM price_list, shopping_cart WHERE shopping_cart.pricelist_id = price_list.id")
+#db.execute("INSERT INTO shopping_cart (item_id) VALUES (#{selection});")
+#db.execute("SELECT * FROM price_list, shopping_cart WHERE shopping_cart.item_id = price_list.id;")
 #db.execute("SELECT price_list.name FROM price_list JOIN shopping_cart ON
 #	shopping_cart.pricelist_id = price_list.id")
 
