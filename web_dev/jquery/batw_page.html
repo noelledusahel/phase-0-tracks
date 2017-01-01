@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BATW</title>	
+<link rel= "stylesheet" type ="text/css" href="style.css">
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	$("h1").fadeIn(3000);
+	$("h1").animate({
+		left: '350px'
+	})
+	$("#description").animate({
+		left:'250px',
+		height: '50px',
+		width: '700px',
+		fontSize: '1.5em'
+	})
+
+	});
+	</script>
+</head>
+<body>
+<h1>Breakfast Around the World</h1>	
+<nav> <a href ="recipes.html"> Recipes</a></nav>
+<p id="description">
+Learn about the first meal of the day from cultures across the globe.
+<form name = "breakfast" action = "https://httpbin.org/post" method = "post">
+<div>
+<label>Where would you like to travel?</label>
+	<select name = "country">
+		<option value ="Brazil">Brazil</option>
+		<option value ="Morocco">Morocco</option>
+		<option value ="Mexico">Mexico</option>
+	</select>
+</div>
+</form>
+<section class = "preview">
+	<div>
+<h2>Brazil </h2>
+</div>
+	<div>
+		<img src="http://cookingtheglobe.com/wp-content/uploads/2016/04/brazilian-breakfast.jpg" alt= "brazil breakfast" height= "225" width= "412">
+	</div>
+
+
+	<div>
+<h2>Morocco</h2> </div>
+	<div>
+		<img src="BATW/Moroccan-Breakfast.jpg.824x0_q85.jpg" alt = "morocco breakfast" height="225" width="412"> 
+	</div>
+	<div>
+		<h2>Mexico</h2>
+	</div>
+<div>
+<img src="BATW/Mexican-breakfast.jpg" alt = "mexico breakfast" height="225" width="412">
+</div>
+</section>
+<section> 
+<h6>Blogroll</h6>
+<div><a href="http://cookingtheglobe.com/recipe-index/?_sft_meal-type=breakfast&sf_paged=2">Cooking the Globe </a> </div>
+<div> <p>I like this site because the arrangement of images is very clean and inviting. The forms on this page also give you plenty of options lead you to the recipes the user is searching for. </p></div>
+</section>
+<footer>
+	Order the Book!
+	</footer>
+	</body>
+	
+</html>
