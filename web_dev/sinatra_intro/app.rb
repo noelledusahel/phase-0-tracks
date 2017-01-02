@@ -74,3 +74,12 @@ get '/add/:number_1/:number_2' do
 	result = number_1 + number_2
 	 "the answer is #{result}"
 end 
+
+#research 
+
+# There are other web application frameworks such as ruby on rails, Merb , Nitro, and Camping
+# rack 'n' alternatives, Volt, meta 
+
+# for databases there is DataMapper along with Sqlite and Active Record
+# a web stack is a collection of software used for web development  th
+#the components are an operating system (OS) a programming language, a database software and a web server
