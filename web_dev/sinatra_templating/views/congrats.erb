@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Congratulations</title>
 </head>
 <body>
+<p>
+	<h2>Congratulations to our graduates</h2>
+	<ol>
+	<% @students.each do |student| %>
+		<% if student['name'].length > 15 %>
+			<li> Contratulations to <%= student['name']%>
+			from <%= student['campus']%>
+			</li>
+		<%end%>
+	<%end%> 
+	</ol>
+</p>
 
 </body>
 </html>
